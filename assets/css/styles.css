@@ -1,0 +1,60 @@
+.divider {
+    height:50px;
+}
+
+section {
+    height:500px;
+    padding-top:50px;
+    padding-bottom:50px;
+    overflow:auto;
+    border-bottom: 5px white solid;
+}
+
+.bg-1 {
+  background: url('../images/columbia.jpg') no-repeat center center fixed;
+    color:#fff;
+    background-size:cover;
+}
+  
+.bg-2 {
+  background: url('../images/columbia.jpg') no-repeat top center fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+.bg-3 {
+  background: url('../images/columbia.jpg') no-repeat bottom center fixed;
+    color:#fff;
+    background-size:cover;
+}
+
+#footer {
+    height: 60px;
+    background-color:#585858;
+    margin-top:50px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+#footer a {
+  color:#efefef;
+}
+
+.profile {
+  background: url('../images/profile.jpg') -100px no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+  border: 5px solid white;
+  height: 300px;
+  width: 300px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  position: absolute;
+    bottom:5%;
+    right:25%;
+    left:50%;
+    margin-left:-150px;
+}
