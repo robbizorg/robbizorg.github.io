@@ -53,8 +53,40 @@ section {
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg);
   position: absolute;
-    bottom:5%;
+    bottom:10%;
     right:25%;
     left:50%;
     margin-left:-150px;
+}
+
+.heading1 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  font-size: 5em;
+}
+
+.background3 {
+  background-color: #312F34;
+}
+
+.panelbg {
+  background-color: transparent;
+  color: white;
+}
+
+.panelbg2 {
+  background-color: #120E18;
+  color: white;
+}
+
+.panelheadingbg {
+  background-color: #45565C;
+}
+
+.text {
+  margin-top: -20px;
 }
