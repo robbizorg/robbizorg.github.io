@@ -40,6 +40,13 @@ section {
   color:#efefef;
 }
 
+@media only screen and (max-width: 480px) {
+    .profile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 3000px) {
 .profile {
   background: url('../images/profile.jpg') -100px no-repeat;
   background-size: cover;
@@ -57,7 +64,9 @@ section {
     right:25%;
     left:50%;
     margin-left:-150px;
+  }
 }
+
 
 .heading1 {
   text-align: center;
