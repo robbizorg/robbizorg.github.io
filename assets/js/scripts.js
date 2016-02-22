@@ -50,3 +50,10 @@ $('.bg-1,.bg-3').parallax({
 $('.bg-2').parallax({
 	speed :	0.25
 });
+
+$(function(){
+    $(".subtitle").typed({
+      strings: ["Think Hard", "Work Hard", "Work Harder"],
+      typeSpeed: 0
+    });
+});
