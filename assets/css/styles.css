@@ -49,6 +49,17 @@ section {
     .profile {
         display: none;
     }
+
+.title {
+  font-size: 3em;
+  font-family: TypeWriter;
+}
+
+.subtitle {
+  font-family: typewriter;
+  font-size: 1em;
+}
+
 }
 
 @media only screen and (max-width: 3000px) {
@@ -70,6 +81,17 @@ section {
     left:50%;
     margin-left:-150px;
   }
+
+.title {
+  font-size: 5em;
+  font-family: TypeWriter;
+}
+
+.subtitle {
+  font-family: typewriter;
+  font-size: 3em;
+}
+
 }
 
 
@@ -80,10 +102,6 @@ section {
   font-family: TypeWriter;
 }
 
-.title {
-  font-size: 5em;
-  font-family: TypeWriter;
-}
 
 .background3 {
   background-color: #312F34;
@@ -105,11 +123,6 @@ section {
 
 .text {
   margin-top: -20px;
-}
-
-.subtitle {
-  font-family: typewriter;
-  font-size: 3em;
 }
 
 .typed-cursor{
