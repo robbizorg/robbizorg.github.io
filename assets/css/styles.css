@@ -100,8 +100,6 @@ section {
   font-size: 3em;
 }
 
-}
-
 .heading1 {
   text-align: left;
   padding: 0;
@@ -109,6 +107,10 @@ section {
   font-family: TypeWriter;
   color: white;
 }
+
+}
+
+
 
 .heading2 {
   text-align: left;
