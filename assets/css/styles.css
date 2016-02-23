@@ -1,6 +1,6 @@
 @font-face {
     font-family: "TypeWriter";
-    src: url(../fonts/typewriter.ttf) format("truetype");
+    src: url(../fonts/ChanticleerRomanNF.ttf) format("truetype");
 }
 
 .divider {
@@ -100,6 +100,15 @@ section {
   padding: 0;
   margin: 0;
   font-family: TypeWriter;
+  color: white;
+}
+
+.heading2 {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  font-family: TypeWriter;
+  color: white;
 }
 
 
@@ -110,6 +119,7 @@ section {
 .panelbg {
   background-color: transparent;
   color: white;
+  border: 0;
 }
 
 .panelbg2 {
@@ -121,9 +131,6 @@ section {
   background-color: #45565C;
 }
 
-.text {
-  margin-top: -20px;
-}
 
 .typed-cursor{
     display: none;

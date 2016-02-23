@@ -53,7 +53,7 @@ $('.bg-2').parallax({
 
 $(function(){
     $(".subtitle").typed({
-      strings: ["Think Hard", "Work Hard", "Work Harder"],
+      strings: ["Anthropologist", "Programmer", "Linguist", "All Around Awesome"],
       typeSpeed: 0
     });
 });
