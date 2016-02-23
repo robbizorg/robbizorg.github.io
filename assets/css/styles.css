@@ -53,12 +53,19 @@ section {
 .title {
   font-size: 3em;
   font-family: TypeWriter;
-  line-height: 40%;
 }
 
 .subtitle {
   font-family: typewriter;
   font-size: 1em;
+}
+
+.heading1 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-family: TypeWriter;
+  color: white;
 }
 
 }
@@ -95,9 +102,8 @@ section {
 
 }
 
-
 .heading1 {
-  text-align: center;
+  text-align: left;
   padding: 0;
   margin: 0;
   font-family: TypeWriter;
@@ -112,13 +118,16 @@ section {
   color: white;
 }
 
+.headerfix {
+  background-color: #312F34;
+}
 
 .background3 {
   background-color: #312F34;
 }
 
 .panelbg {
-  background-color: transparent;
+  background-color: #312F34;
   color: white;
   border: 0;
 }
