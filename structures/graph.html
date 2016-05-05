@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Graph</title>
+	<!-- Adding jQuery-->
+	<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+	<!-- Adding D3 -->
+	<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<!-- Adding Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<style>
+
+		.tab {
+			display: inline-block;
+			float: left;
+			padding: 5px 10px 5px 10px;
+			margin: 5px;
+			cursor: pointer;
+			color: black;
+			border-radius: 2.5px;
+		}
+
+		.tab:hover {
+			color: white;
+			background-color: black;
+
+		}
+
+		.marker {
+			fill: none;
+			stroke: black;
+		}
+
+		#text {
+			padding: 5px;
+			margin: 5px;
+		}
+
+		.node circle {
+			fill: silver;
+			stroke: black;
+			stroke-width: .5;
+		}
+
+		.node text {
+  			pointer-events: none;
+  			font: 10px sans-serif;
+  			color: black;
+		}
+
+		.link {
+			stroke: black;
+			stroke-width: .3;
+			/*stroke-dasharray:5, 5;*/
+		}
+
+		.linkSelected {
+			stroke: #40ff00;
+			stroke-width: .3;
+		}
+		
+		.algCon {
+			margin-top: -25px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<br>
+	<div class="info col-md-6">
+		<div class="row">
+			<div class="tab" id="about">About</div>
+			<div class="tab" id="costs">Costs</div>
+			<div class="tab" id="applications">Applications</div>
+			<div class="tab" id="algorithms">Algorithms</div>
+		</div>
+		<hr>
+		<div class="row" id="text">
+			
+		</div>
+		
+	</div>
+
+	<div class="linkedList col-md-6" style="border: 1px solid black;">
+		<br>
+		<div id="listctrl" style="display: inline-block; float: right;">
+			<div class="row">
+				<input id="itemText" type="text" placeholder="New Node Element"/>
+				<input id="source" type="text" placeholder="Node Source">
+				<button class="btn" id="itemBtn">New Node</button>
+			</div>
+			<div class="row" style="display: inline-block; float: right; margin-top: 5px; margin-bottom: 5px;">
+				<input id="remove" type="text" placeholder="Remove idx">
+				<button class="btn" id="removeBtn">Remove Node</button>
+			</div>
+			<div class="row">
+				<input id="source1" type="text" placeholder="Source">
+				<input id="target1" type="text" placeholder="Target">
+				<input id="weight" type="text" placeholder="Weight">
+				<button class="btn" id="linkBtn">New Link</button>
+			</div>
+		</div>
+		<!-- <svg id="list"></svg> -->
+	</div>
+</div>
+
+<script src="../scripts/structures.js"></script>
+<script src="../scripts/graph.js"></script>
+<script src="../scripts/control.js"></script>
+</body>
+</html>

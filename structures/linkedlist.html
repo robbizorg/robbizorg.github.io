@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Linked List</title>
+	<!-- Adding D3 -->
+	<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<!-- Adding Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<style>
+		.tab {
+			display: inline-block;
+			float: left;
+			border: 1px black solid;
+			padding: 5px 10px 5px 10px;
+			margin: 5px;
+			cursor: pointer;
+		}
+
+		#text {
+			padding: 5px;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<br>
+	<div class="info col-md-6" style="border: 1px solid black;">
+		<div class="row">
+			<div class="tab" id="about">About</div>
+			<div class="tab" id="costs">Costs</div>
+			<div class="tab" id="applications">Applications</div>
+		</div>
+		<hr>
+		<div class="row">
+			<p id="text"></p>
+		</div>
+		
+	</div>
+
+	<div class="linkedList col-md-6" style="border: 1px solid black;">
+		<br>
+		<div id="listctrl">
+			<input id="itemText" type="text" placeholder="New Node Element"/>
+			<button class="btn" id="itemBtn">New Node</button>
+		</div>
+		<!-- <svg id="list"></svg> -->
+	</div>
+</div>
+
+<script src="../scripts/structures.js"></script>
+<script src="../scripts/linkedlist.js"></script>
+</body>
+</html>
