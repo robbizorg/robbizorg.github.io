@@ -25,3 +25,8 @@ version:             1.0.0
 
 # plugins
 plugins: [jekyll-paginate]
+
+collections:
+  projects:
+    output: true
+    permalink: localhost:4000/:path/
