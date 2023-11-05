@@ -2,17 +2,18 @@
 title: "Robin Netzorg"
 image: profile.jpg
 about:
-  template: solana
+  id: about-content
+  image-shape: round
+  template: trestles
   links:
     - icon: twitter
-      text: Twitter
       href: https://twitter.com/RNetzorg
     - icon: github
-      text: Github
       href: https://github.com/robbizorg
     - icon: mortarboard
-      text: Google Scholar
       href: https://scholar.google.com/citations?user=2L_8ynAAAAAJ&hl=en
+    - icon: envelope
+      href: mailto:robert_netzorg@berkeley.edu
 listing:
   id: paper-listing
   contents: papers
@@ -23,12 +24,17 @@ listing:
   filter-ui: false
 ---
 
-Hey! If you found this site, incredibly well done. Who knows how that happened?
+:::{#about-content}
 
-I'm Robin Netzorg (she/her), a fifth-year PhD student in UC Berkeley's EECS Department, advised by Prof. Gopala Anumanchipalli and Prof. Bin Yu. 
+A girl close to noise.
 
+I'm Robin Netzorg (she/her), a fifth-year PhD student in UC Berkeley's EECS Department, advised by Prof. Gopala Anumanchipalli and Prof. Bin Yu. Research-wise, I'm currently interested in flexible speech synthesis and voice modification, with a particular interest in applying these techniques to build tools for speech therapy and Gender-Affirming Voice Training (GAVT). Previously, I was interested in interpretable machine learning and causal inference, but, well, sometimes you just have to make a drastic life change in the fourth year of your PhD. 
 
-## Research
+Outside of research, I'm your semi-stereotypical Bay Area <span class="trans_blue">tr</span><span class="trans_pink">an</span><span class="trans_white">s g</span><span class="trans_pink">ir</span><span class="trans_blue">l.</span> I'm into making "music" with my friends, playing video games, reading books, and jotting down thoughts in my journal. Check out my research below or <span class="no-underline">[click here to see whatever it is I've decided to post.](posts.qmd)</span>
+
+:::
+
+## Selected Research
 
 ::: {#paper-listing}
 :::

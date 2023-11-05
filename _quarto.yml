@@ -11,6 +11,8 @@ website:
         href: https://github.com/robbizorg
       - icon: twitter
         href: https://twitter.com/RNetzorg
+      - icon: mortarboard
+        href: https://scholar.google.com/citations?user=2L_8ynAAAAAJ&hl=en
 format:
   html:
     theme: cosmo
