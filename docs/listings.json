@@ -1,0 +1,15 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/papers/permod/index.html",
+      "/papers/pq_rep/index.html"
+    ]
+  },
+  {
+    "listing": "/posts.html",
+    "items": [
+      "/posts/welcome/index.html"
+    ]
+  }
+]

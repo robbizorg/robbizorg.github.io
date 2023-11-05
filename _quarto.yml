@@ -1,0 +1,20 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Robin/e Netzorg"
+  navbar:
+    left:
+      - posts.qmd
+      - icon: github
+        href: https://github.com/robbizorg
+      - icon: twitter
+        href: https://twitter.com/RNetzorg
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+
+

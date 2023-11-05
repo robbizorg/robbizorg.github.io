@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Robin Netzorg",
+    "section": "",
+    "text": "Hey! If you found this site, incredibly well done. Who knows how that happened?\nI’m Robin Netzorg (she/her), a fifth-year PhD student in UC Berkeley’s EECS Department, advised by Prof. Gopala Anumanchipalli and Prof. Bin Yu."
+  },
+  {
+    "objectID": "index.html#research",
+    "href": "index.html#research",
+    "title": "Robin Netzorg",
+    "section": "Research",
+    "text": "Research\n\n\n\n\n  \n\n\n\n\nPerMod: Perceptually Grounded Voice Modification with Latent Diffusion Models\n\n\n\n\n\n\n\n\n\n\n\nOct 4, 2023\n\n\nRobin Netzorg, Ajil Jalal, Luna McNulty, Gopala Anumanchipalli\n\n\n\n\n\n\n  \n\n\n\n\nTowards an Interpretable Representation of Speaker Identity via Perceptual Voice Qualities\n\n\n\n\n\n\n\n\n\n\n\nOct 4, 2023\n\n\nRobin Netzorg, Bohan Yu, Andrea Guzman, Peter Wu, Luna McNulty, Gopala Anumanchipalli\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "papers/permod/index.html#abstract",
+    "href": "papers/permod/index.html#abstract",
+    "title": "PerMod: Perceptually Grounded Voice Modification with Latent Diffusion Models",
+    "section": "Abstract",
+    "text": "Abstract\nPerceptual modification of voice is an elusive goal. While non-experts can modify an image or sentence perceptually with available tools, it is not clear how to similarly modify speech along perceptual axes. Voice conversion does make it possible to convert one voice to another, but these modifications are handled by black box models, and the specifics of what perceptual qualities to modify how to modify them are unclear. Towards allowing greater perceptual control over voice, we introduce PerMod, a conditional latent diffusion model that takes in an input voice and a perceptual qualities vector, and produces a voice with the matching perceptual qualities. Unlike prior work, PerMod generates a new voice corresponding to perceptual modifications. Evaluating perceptual quality vectors with RMSE from both human and predicted labels, we demonstrate that PerMod produces voices with the desired perceptual qualities for typical voices, but performs poorly on atypical voices."
+  },
+  {
+    "objectID": "posts/welcome/index.html#woah-what-is-this",
+    "href": "posts/welcome/index.html#woah-what-is-this",
+    "title": "Finally Made a Website.",
+    "section": "Woah! What is this?",
+    "text": "Woah! What is this?\nI finally made a website."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Tutorials, Demos, and Random, Random Musings",
+    "section": "",
+    "text": "Finally Made a Website.\n\n\n\n\n\n\n\nblog\n\n\n\n\n\n\n\n\n\n\n\nNov 4, 2023\n\n\nRobin\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "papers/pq_rep/index.html#abstract",
+    "href": "papers/pq_rep/index.html#abstract",
+    "title": "Towards an Interpretable Representation of Speaker Identity via Perceptual Voice Qualities",
+    "section": "Abstract",
+    "text": "Abstract\nUnlike other data modalities such as text and vision, speech does not lend itself to easy interpretation. While lay people can understand how to describe an image or sentence via perception, non-expert descriptions of speech often end at high-level demographic information, such as gender or age. In this paper, we propose a possible interpretable representation of speaker identity based on perceptual voice qualities (PQs). By adding gendered PQs to the pathology-focused Consensus Auditory-Perceptual Evaluation of Voice (CAPE-V) protocol, our PQ-based approach provides a perceptual latent space of the character of adult voices that is an intermediary of abstraction between high-level demographics and low-level acoustic, physical, or learned representations. Contrary to prior belief, we demonstrate that these PQs are hearable by ensembles of non-experts, and further demonstrate that the information encoded in a PQ-based representation is predictable by various speech representations."
+  }
+]

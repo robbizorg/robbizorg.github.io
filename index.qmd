@@ -1,0 +1,34 @@
+---
+title: "Robin Netzorg"
+image: profile.jpg
+about:
+  template: solana
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/RNetzorg
+    - icon: github
+      text: Github
+      href: https://github.com/robbizorg
+    - icon: mortarboard
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=2L_8ynAAAAAJ&hl=en
+listing:
+  id: paper-listing
+  contents: papers
+  sort: "date desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+---
+
+Hey! If you found this site, incredibly well done. Who knows how that happened?
+
+I'm Robin Netzorg (she/her), a fifth-year PhD student in UC Berkeley's EECS Department, advised by Prof. Gopala Anumanchipalli and Prof. Bin Yu. 
+
+
+## Research
+
+::: {#paper-listing}
+:::
