@@ -23,3 +23,7 @@
 #research-listing {
 clear: both; /* This will ensure the listing starts below the floated elements */
 }
+
+.paper-link a {
+    text-align: center;
+}

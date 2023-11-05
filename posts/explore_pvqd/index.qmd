@@ -1,0 +1,127 @@
+---
+title: "Voice Research #1: Exploring the Perceptual Voice Qualities Database with Pandas and Seaborn"
+author: "Robin"
+date: "2023-11-04"
+categories: [perceptual qualities, voice research]
+format:
+  html:
+    code-fold: true
+    toc: true
+---
+
+# WEE-WOO: This is a work in progress
+
+![Another day, another tutorial](thumbnail.webp){width=800 height=300 fig-align="center"}
+
+Welcome to a blog post about exploring the <span class="no-underline">[Perceptual Voice Qualities Database (PVQD)](https://voicefoundation.org/health-science/videos-education/pvqd/)</span>. This is based off of a ML + Speech workshop I held in the Berkeley Speech Group in Fall '23. <span class="no-underline">[That workshop and the workbooks are available online](https://github.com/Berkeley-Speech-Group/audio_ml_workshop_2023)</span> if you want to work with the code yourself! If you're interested in Deep Learning, there's also some cool stuff in there about working with HuBERT representations of speech data too! The workshop doesn't assume any knowledge of Pandas, Machine Learning, or Deep Learning, with the focus is more on getting your hands dirty with the tools vs. understanding 100% of what you're doing. 
+
+That said, if you want to learn more about the tools, the repo contains a list of resources for learning more. 
+
+Anyways, if I'm linking to that repo, you might be wondering, why write a blog post about it? First, who doesn't love a bit of redundancy? Second, not everyone is going to want to actually work with the code themselves. I want to communicate and share the stuff I've been working on, and generally share the thought processes I have when trying to work with Speech data. This is to get feedback on my work from folks who might not know a lot about data science and machine learning. This is also to serve as a type of onboarding and explanation tool for those interested in conducting voice research with publicly available datasets. Finally, I really, really need just say what I do in plain english!
+
+## Why Use Data Science and Machine Learning to Study Voice?
+
+## What are Perceptual Voice Qualities and the PVQD?
+
+## What are Pandas and Seaborn?
+
+## Preprocessing the PVQD
+
+If you're interested in studying how voice varies across demographics and vocal health, the PVQD is a great starting point. Not only does the dataset contain ~2hrs of audio from vastly different speakers, the data also comes with demographic information about the speakers as well. Let's visualize that now.
+
+```{python}
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt 
+import seaborn as sns
+plt.rcdefaults() # Default
+
+demo_df = pd.read_csv("../../data/pvqd/pvqd_demographics.csv")
+demo_df.head(5)
+```
+
+We see that the PVQD comes with three pieces of demographic information: the participants' Gender, Age, Diagnosis. Frustratingly as someone interested in studying transgender and gender-diverse voices, there aren't that many datasets out there that contain more inclusive labels of gender. Gender, in the vast majority of datasets, is listed as a binary "F" or "M". In addition to binary labels of gender, from my personal experience, most of publicly available speech datasets do not contain non-cisgender speakers. For the construction of machine learning models that can provide feedback on gender affirming voice training, this is a huge limitation. Machine learning methods often fail to generalize to unseen data, especially when that data is "out of distribution". 
+
+Although we won't be able to get a complete map of what voice is capable of, we can start to get a rough one. The nice thing about the PVQD is that it does provide us with voices that do exhibit certain qualities we might want to avoid during voice training, such as breathiness and strain. Let's load in that data while we're talking about it:
+
+```{python}
+
+pq_train = pd.read_csv("../../data/pvqd/train_test_split/y_train.csv", index_col=0)
+pq_train.head(5)
+
+```
+
+As we said before, the CAPE-V measures perceptual qualities on a 1-100 scale. Since these values are the average of six different raitngs, we get all those decimal places. It's nice to look at the data like that, to make sure it's there, but we're still a bit away from actually learning anything about the data. I'm brushing this part under the rug (see the workshop if you're curious!), but I'm going to clean up the data and combine the two dataframes so we can start drawing some connections. 
+
+```{python}
+### Fix up the demo_df first
+
+## Fix Gender
+cor_gender = {
+    "f": "F",
+    "m": "M",
+    "female": "F",
+    "male": "M"
+}
+
+demo_df["Gender"] = demo_df["Gender"].str.lower().map(cor_gender)
+
+## Make Binary Value for Diagnosis
+# Create a function to apply to the column
+def process_diagnosis(diagnosis):
+    if pd.isnull(diagnosis):
+        return np.nan
+    if diagnosis == "N":
+        return "N"
+    else:
+        return "Y"
+
+demo_df["Diagnosis "] = demo_df["Diagnosis "].map(process_diagnosis)
+
+## We can't visualize nan data, so let's not consider those rows
+# ~ is a way to invert a numpy array/pandas series of boolean values. A handy trick
+diagnosis_df = demo_df[~pd.isnull(demo_df["Diagnosis "])]
+
+# Rename column and remote white space
+diagnosis_df = diagnosis_df.rename(columns={"Participant ID ": "File"})
+diagnosis_df["File"] = diagnosis_df["File"].str.upper().str.strip()
+
+## Combine the Data
+
+# Merge the two dataframes using a left join
+matched_df = pq_train.merge(diagnosis_df, how="left", on="File")
+
+matched_df = matched_df[~pd.isnull(matched_df["Gender"])]
+
+print("Number of NaN Values: %s" % len(matched_df[pd.isnull(matched_df["Gender"])]))
+
+matched_df.head()
+```
+
+Cool! We have our combined dataset that has all the information in one place. 
+
+## Visualizing the PVQD
+
+Let's start doing our explorations! The first thing we should figure out is what the age and gender makeup of the dataset looks like. 
+
+```{python}
+gender_breakdown = diagnosis_df[["Gender", "Age"]].groupby("Gender").agg(["mean", "count"]).reset_index()
+
+sns.histplot(data=diagnosis_df, x="Age", hue="Gender")
+plt.show()
+
+gender_breakdown
+```
+
+Seems like there's about twice as many women in the dataset than men, with many of the women being younger on average. 
+
+What about the age and diagnosis breakdown?
+
+```{python}
+sns.histplot(data=diagnosis_df, x="Age", hue="Diagnosis ")
+plt.show()
+```
+
+While there are quite a few young people with diagnosis, we see that healthy older individuals are underrepresented in the dataset, and the majority of those with diagnoses skew older. 
+
+From this point on, it's important to note that I'm only dealing with the [training set](https://machinelearningmastery.com/train-test-split-for-evaluating-machine-learning-algorithms/) to avoid biasing the results we find. It is okay to compute statistics about the demographics over the entire dataset, but, since we are hoping to build models that learn the perceptual qualities, performing data exploration with them in the data could possibly bias our findings. To make sure we have a proper test set to evaluate our findings on, we'll conduct our exploration on the training data. 
