@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Robin">
+<meta name="author" content="Robbie">
 <meta name="dcterms.date" content="2023-11-04">
 
-<title>Robin/e Netzorg - Finally Made a Website.</title>
+<title>Robin/e Netzorg - Finally Made a Website. Aka, Welcome to My Life</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -113,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Finally Made a Website.</h1>
+      <h1 class="title">Finally Made a Website. Aka, Welcome to My Life</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">blog</div>
               </div>
@@ -126,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Robin </p>
+               <p>Robbie </p>
             </div>
     </div>
       
@@ -151,10 +185,62 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><img src="thumbnail.jpeg" class="img-fluid"></p>
-<section id="woah-what-is-this" class="level2">
-<h2 class="anchored" data-anchor-id="woah-what-is-this">Woah! What is this?</h2>
-<p>I finally made a website.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="thumbnail.jpeg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">A girl who has her <span style="text-decoration: line-through">shit</span> life together</figcaption>
+</figure>
+</div>
+<p>After years and years, and years, and years and years and years, I made a website. The first time I ever talked about wanting to make a website was approximately on December 28, 2017. So that’s, what, since my junior year of college I’ve been thinking and failing to make a website? Let’s code out how long it’s been, cause why not:</p>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Start and end dates</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>start_date <span class="op">=</span> datetime(<span class="dv">2017</span>, <span class="dv">12</span>, <span class="dv">28</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>end_date <span class="op">=</span> datetime(<span class="dv">2023</span>, <span class="dv">11</span>, <span class="dv">4</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Get that difference</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>difference <span class="op">=</span> end_date <span class="op">-</span> start_date</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Conversionssss</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>years <span class="op">=</span> difference.days <span class="op">//</span> <span class="dv">365</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>months <span class="op">=</span> (difference.days <span class="op">%</span> <span class="dv">365</span>) <span class="op">//</span> <span class="dv">30</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>days <span class="op">=</span> (difference.days <span class="op">%</span> <span class="dv">365</span>) <span class="op">%</span> <span class="dv">30</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Beep boop beep: It took you </span><span class="sc">{</span>years<span class="sc">}</span><span class="ss"> years, </span><span class="sc">{</span>months<span class="sc">}</span><span class="ss"> months, and </span><span class="sc">{</span>days<span class="sc">}</span><span class="ss"> days to make me! Beep boop beep."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Beep boop beep: It took you 5 years, 10 months, and 12 days to make me! Beep boop beep.</code></pre>
+</div>
+</div>
+<p>Jesus H. Christ. It took me almost six years to actually get around to building this thing! If you asked college junior me how I’d feel knowing that it would take me six years to put together a simple website, I’d probably have responded with initial disbelief at future girl-me, horrendous confusion as to why the first thing she’d bring up is a stupid website, and then a impending sense of dread at my own inability to be able to stick to the things that I “needed” to do.</p>
+<p>Might be obvious by the fact that it took me six years to get around to it, but, as it turns out, a personal website isn’t necessary to your career or personal development at all. Even as an <span style="text-decoration: line-through">un</span>successful PhD student, a personal website didn’t really matter much. Arguably, it’s probably a better thing <em>not</em> to have one. The self-importance, the stupifying effect of marketing, people learning what I actually think. <em>Shudder</em>. Not good things.</p>
+<p>But here I am six years later, having made a personal website. Why? I could pontificate for paragraphs about the need to market oneself in today’s economy in order to maximize the impact and visibility of one’s work, but I’ll spare you the details. Just know, a big part of this is probably because I feel like I actually have work to share now, that it’s important that people see this work, and that’s why I’m making this.</p>
+<p>There’s this article I’ve been wanting to write for years, “To Share or Not to Share”. Well, I used to want to write it. back when I still thought I was neurotypical enough to be able to handle more than one task at a time, to be able to take the time to craft out a well-reasoned and researched argument while being a “full-time” grad student. So easy to beat yourself up over that stuff.</p>
+<p>Anyways! The gist of the article is simple, and getting it out in some form is better than not it all, so here’s the grand question I felt like I had to share with the world around me: In this hyperactive, distracted, terminally online age, if I don’t share my life, do I exist? I know I got so much stuff going on that I sometimes forget about people until I see their content pop up somewhere. How true is that for others? Do people only think of me when a picture I post pops up on their feed? If I spend all my time alone, not sharing and posting my life and thoughts, am I even real?</p>
+<p>(A bit selfish, don’t you think?)</p>
+<p>In a former life, I studied <span class="no-underline"><a href="https://arxiv.org/abs/1812.03379">popularity on Twitch</a></span>, and what we found in the course of our non-causal study was clear. Popularity is a combination of hard work and blind luck. Research! Betting on blind luck seems like a losing strategy, so may as well lean into whatever this hard work thing is. We couldn’t really measure content quality, but it was pretty clear that the people who grew in popularity the most were very active content creators.</p>
+<p>It makes sense, you’re not going to get people to pay attention to you unless you’re something that can be perceived in the first place. And on Twitch, the way to do that is stream. On pretty much any social media website, the way to do that is post. In real life, at least here in the US, where we probably don’t live close to the people we care about, where we probably won’t run into friends in our day-to-day routines unless it’s planned, where the addictive allure and perceived safety of anonymity online compels us to lie indoors in catatonic depression, how do you be perceivable?</p>
+<p>It’s simple. You share.</p>
+<p>It really doesn’t matter what you share, or how you share it. As long as a little notification pops up that has your name attached to it, that person had to think of you for that brief moment. For that moment, you existed outside of that little head of yours. If you do it enough, maybe they start developing a need for that notification, craving it every time they open their phone. Maybe they dread it. Maybe there’s an app keeping count, reminding that that if they don’t think of you, they’re going to lose all some kind of streak. Maybe they can’t wait to think of you, so they find a community of people who just think about you. Then you could look yourself up on Google and confirm what you hoped to be true all along:</p>
+<pre><code>You are real. You are real. You are real.</code></pre>
+<p>Ugh, the Internet sucks so much.</p>
+<p>This is obviously just a tad bit insane, but there’s definitely some kernel of truth to it. The nagging thought over the yeras of making a website probably came from some version of this need to exist outside of my own head. All this <em>before</em> I needed people to affirm my identity as a woman. Do you know how much I want people to perceive me for who I know myself to be? That little existential validation when a friend calls me pretty–how could I resist sharing a pic or two?</p>
+<p>At the same time, is your online-self actually you? Are you representing yourself how you want to be represented? Are people perceiving you the way you want to be perceived? I feel like it’s <em>so</em> easy to lose yourself by obsessing over these questions, not to mention the real chance of harm from that people can inflict on one another…</p>
+<p>To share or not to share, that is the question.</p>
+<section id="the-sunday-sophist" class="level2">
+<h2 class="anchored" data-anchor-id="the-sunday-sophist">The Sunday Sophist</h2>
+<p>Years ago, back when I thought I was neurotypical enough to handle more than one task at a time, I dreamt of releasing semi-regular essays on my random musings. Turns out, I didn’t have the time, energy, or dedication to do it, but maybe I can do a not semi-regular posting of trivial thoughts?</p>
+<p>When I was back in college, I somehow ended up in the position of being a teaching assistant for a graduate-level class. Masters students were going to some 19 year old kid for advice on their AI home. Imposter syndrome was real (is it ever not?), and I thought of myself as a bit of a sophist–literally a teacher these people were paying who had less life and educational experience than them.</p>
+<p>Academics, with our air of legitimacy, citation counts, and wasted years, have a tendency to overinflate the importance of the thoughts we have, or their validity. We build off of prior work, point to the textbook, and use sound, reasonable logic to make our claims. We are to be believed, we say. You can trust us. We, after all, are the experts.</p>
+<p>I was hoping that at some point I’d feel less like an imposter, some kind of sophist. Eventually, with enough experience and affirmation, I’d develop my own sense of security in my knowledge. If I read enough, write enough, and think enough, I’d finally be confident in what I believe and my ability to teach it. I’d be a real expert. Eventually, I’d finally have something worth saying!</p>
+<p>Through the years, and I mean <em>years</em>, that feeling of security has never come. In times when my career was going well (which has it ever gone well?), to times when my career was not going well, I’ve never felt secure in what I’m doing or what I know. So many people are wrong, regardless of their sound logic and mountains of references, how would I know if I’m ever right?</p>
+<p>I don’t, and that’s okay. To be honest, I don’t think I ever want to know if I’m right or not. That sort of certainty sounds scary. Besides, the rush of fear when someone points out a flaw in my reasoning is way more exciting. That uncertainty in it of itself is reassuring. I trust myself to change my opinion when I’m wrong, to always doubt myself just enough to not take myself too seriously, to be kind of happy with being a sophist. Who’s really real, anyways?</p>
+<p><br></p>
+<p>Welcome to my website. Based on the available readership statistics, the vast majority of you never make it down this far anyways. But if you did, thank you, I guess? I’ve been dreading making a website, but, at this point in my career, I feel like I have to. Maybe I’ll expand on that at some point. Maybe I won’t. Who knows? I suffer from the unfortunate affliction of wanting to write for the sake of writing, even if I have nothing to say. I’ll probably ramble more unsubstantiated claims about a variety of topics over the time to come. And if you’re wondering why I would ever share these thoughts in my head, let met tell you this: I’m sharing them because I want to. Where that want comes from, I don’t know. Are they worth sharing, and I’m someone who’s worth listening to? Probably not.</p>
+<p>Who’s worth listening to anyways?</p>
 
 
 </section>
