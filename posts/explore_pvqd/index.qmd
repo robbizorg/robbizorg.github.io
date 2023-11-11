@@ -23,14 +23,16 @@ And the plain English explanation is simple. Or, well, at least short. I use dat
 
 ## Why Use Data Science and Machine Learning to Study Voice?
 
-This question deserves an entire post of its own, not to mention a long discussion on the state of research in voice and voice training more generally. Still, any good tutorial requires a motivation, and the oversimplified version is this: When it comes to modifying a voice, both artificially via speech processing and physically via voice training, the current research is lacking. In speech processing, high-level modification of a particular voice is feasible, such as automatically turning a specific masculine voice into a specific feminine voice, but trying to perform lower-level modification of qualities like breathiness, strain, or resonance is either unclear or requires specialized expert knowledge. In the world of voice voice training, research into Gender-Affirming Voice Care (GAVC) is only really starting to gain traction in Speech Language Pathology, and many of the pedagogies people pursue from online trans voice communities have not been validated experimentally or quantitatively in a formal setting. From an institutional, formal perspective, the effectiveness of behavioral voice modification, and particular approaches and pedagogies, is largely unknown.
+This question deserves an entire post of its own, not to mention a long discussion on the state of research in voice and voice training more generally. Still, any good tutorial requires a motivation, and the oversimplified version is this: When it comes to modifying a voice, both artificially via speech processing and physically via voice training, the current research is lacking. In speech processing, high-level modification of a particular voice is feasible, such as automatically turning a specific masculine voice into a specific feminine voice, but trying to perform lower-level modification of qualities like breathiness, strain, or resonance is either unclear or requires specialized expert knowledge. In the world of voice and voice training, research into Gender-Affirming Voice Care (GAVC) is only really starting to gain traction in Speech Language Pathology, and many of the pedagogies people pursue from online trans voice communities have not been validated experimentally or quantitatively in a formal setting. From an institutional, formal perspective, the effectiveness of behavioral voice modification, and particular approaches and pedagogies, is largely unknown.
 
 There's perspectives waiting to be studied, methods to be discovered, and misconceptions to be debunked. The collection and analysis of data, combined with the modeling potential of machine learning, can help in those pursuits. How? That's a topic for a post of its own. For the time being, let's go ahead and study some perceptual voice qualities.
 
 ## What are Perceptual Voice Qualities and the PVQD?
 
 
+### Perceptual Qualities Examples
 
+Here's a list of examples of the perceptual qualities.
 
 ## What are Pandas and Seaborn?
 
@@ -193,3 +195,4 @@ There's one main takeaway we walk away with by performing this data exploration:
 
 Another takeaway from this exploration is how SLPs label audio data ccording to the CAPE-V protocol. If we wished to incorporate different types of data, or perhaps even learn how to provide CAPE-V ratings ourselves, it's incredibly important to know the difference between voices with high and low values of a particular perceptual quality. Given that this dataset is primarily concerned with patients with voice disorders, knowing the values that healthy or "typical" voices might have lets us know what PQ values healthy voices in other datasets should have. Generalization is a huge issue for machine learning and deep learning models. Having knowledge about how experts use the CAPE-V protocol across voices facilitates the future collection of more data to mitigate the generalization issue. 
 
+In the next post, we're going to try to and actually model some of these perceptual qualities. Let's see if we can do as the experts do!

@@ -190,7 +190,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#wee-woo-this-is-a-work-in-progress" id="toc-wee-woo-this-is-a-work-in-progress" class="nav-link active" data-scroll-target="#wee-woo-this-is-a-work-in-progress">WEE-WOO: This is a work in progress</a>
   <ul class="collapse">
   <li><a href="#why-use-data-science-and-machine-learning-to-study-voice" id="toc-why-use-data-science-and-machine-learning-to-study-voice" class="nav-link" data-scroll-target="#why-use-data-science-and-machine-learning-to-study-voice">Why Use Data Science and Machine Learning to Study Voice?</a></li>
-  <li><a href="#what-are-perceptual-voice-qualities-and-the-pvqd" id="toc-what-are-perceptual-voice-qualities-and-the-pvqd" class="nav-link" data-scroll-target="#what-are-perceptual-voice-qualities-and-the-pvqd">What are Perceptual Voice Qualities and the PVQD?</a></li>
+  <li><a href="#what-are-perceptual-voice-qualities-and-the-pvqd" id="toc-what-are-perceptual-voice-qualities-and-the-pvqd" class="nav-link" data-scroll-target="#what-are-perceptual-voice-qualities-and-the-pvqd">What are Perceptual Voice Qualities and the PVQD?</a>
+  <ul class="collapse">
+  <li><a href="#perceptual-qualities-examples" id="toc-perceptual-qualities-examples" class="nav-link" data-scroll-target="#perceptual-qualities-examples">Perceptual Qualities Examples</a></li>
+  </ul></li>
   <li><a href="#what-are-pandas-and-seaborn" id="toc-what-are-pandas-and-seaborn" class="nav-link" data-scroll-target="#what-are-pandas-and-seaborn">What are Pandas and Seaborn?</a></li>
   <li><a href="#preprocessing-the-pvqd" id="toc-preprocessing-the-pvqd" class="nav-link" data-scroll-target="#preprocessing-the-pvqd">Preprocessing the PVQD</a></li>
   <li><a href="#visualizing-the-pvqd" id="toc-visualizing-the-pvqd" class="nav-link" data-scroll-target="#visualizing-the-pvqd">Visualizing the PVQD</a></li>
@@ -219,11 +222,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>And the plain English explanation is simple. Or, well, at least short. I use data science and machine learning to study voice and voice modification. I’m particularly interested in possible applications to transgender and gender-diverse voice training.</p>
 <section id="why-use-data-science-and-machine-learning-to-study-voice" class="level2">
 <h2 class="anchored" data-anchor-id="why-use-data-science-and-machine-learning-to-study-voice">Why Use Data Science and Machine Learning to Study Voice?</h2>
-<p>This question deserves an entire post of its own, not to mention a long discussion on the state of research in voice and voice training more generally. Still, any good tutorial requires a motivation, and the oversimplified version is this: When it comes to modifying a voice, both artificially via speech processing and physically via voice training, the current research is lacking. In speech processing, high-level modification of a particular voice is feasible, such as automatically turning a specific masculine voice into a specific feminine voice, but trying to perform lower-level modification of qualities like breathiness, strain, or resonance is either unclear or requires specialized expert knowledge. In the world of voice voice training, research into Gender-Affirming Voice Care (GAVC) is only really starting to gain traction in Speech Language Pathology, and many of the pedagogies people pursue from online trans voice communities have not been validated experimentally or quantitatively in a formal setting. From an institutional, formal perspective, the effectiveness of behavioral voice modification, and particular approaches and pedagogies, is largely unknown.</p>
+<p>This question deserves an entire post of its own, not to mention a long discussion on the state of research in voice and voice training more generally. Still, any good tutorial requires a motivation, and the oversimplified version is this: When it comes to modifying a voice, both artificially via speech processing and physically via voice training, the current research is lacking. In speech processing, high-level modification of a particular voice is feasible, such as automatically turning a specific masculine voice into a specific feminine voice, but trying to perform lower-level modification of qualities like breathiness, strain, or resonance is either unclear or requires specialized expert knowledge. In the world of voice and voice training, research into Gender-Affirming Voice Care (GAVC) is only really starting to gain traction in Speech Language Pathology, and many of the pedagogies people pursue from online trans voice communities have not been validated experimentally or quantitatively in a formal setting. From an institutional, formal perspective, the effectiveness of behavioral voice modification, and particular approaches and pedagogies, is largely unknown.</p>
 <p>There’s perspectives waiting to be studied, methods to be discovered, and misconceptions to be debunked. The collection and analysis of data, combined with the modeling potential of machine learning, can help in those pursuits. How? That’s a topic for a post of its own. For the time being, let’s go ahead and study some perceptual voice qualities.</p>
 </section>
 <section id="what-are-perceptual-voice-qualities-and-the-pvqd" class="level2">
 <h2 class="anchored" data-anchor-id="what-are-perceptual-voice-qualities-and-the-pvqd">What are Perceptual Voice Qualities and the PVQD?</h2>
+<section id="perceptual-qualities-examples" class="level3">
+<h3 class="anchored" data-anchor-id="perceptual-qualities-examples">Perceptual Qualities Examples</h3>
+<p>Here’s a list of examples of the perceptual qualities.</p>
+</section>
 </section>
 <section id="what-are-pandas-and-seaborn" class="level2">
 <h2 class="anchored" data-anchor-id="what-are-pandas-and-seaborn">What are Pandas and Seaborn?</h2>
@@ -243,7 +250,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>demo_df <span class="op">=</span> pd.read_csv(<span class="st">"../../data/pvqd/pvqd_demographics.csv"</span>)</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>demo_df.head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="17">
 <div>
 
 
@@ -307,7 +314,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pq_train <span class="op">=</span> pd.read_csv(<span class="st">"../../data/pvqd/train_test_split/y_train.csv"</span>, index_col<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>pq_train.head(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="18">
 <div>
 
 
@@ -425,7 +432,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>Number of NaN Values: 0</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="19">
 <div>
 
 
@@ -529,7 +536,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-5-output-1.png" class="img-fluid"></p>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="20">
 <div>
 
 
@@ -602,7 +609,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Calculate the Average, Median, and Max PQ per diagnosis</span></span>
 <span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>pq_and_diagnosis_df.groupby(<span class="st">"Diagnosis "</span>).agg([<span class="st">"mean"</span>, <span class="st">"median"</span>, <span class="st">"max"</span>]).<span class="bu">round</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="22">
 <div>
 
 
@@ -735,6 +742,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="what-did-we-learn">What did we learn?</h2>
 <p>There’s one main takeaway we walk away with by performing this data exploration: we learn about the data distributions and correlations present in the PVQD data (under our particular set of processing choices). This can tell us about the limits of various modeling approaches we can expect, or failures of generation. For example, if we were to train a model that sought to return a 1-100 value for strain from an individual’s voice, if that individual is young and has a strained voice, our model might not be able to generalize to this new datapoint–possibly returning that the voice is less strained than it actually is. In this case, the model would have too strongly associated strain with age-specific vocal features, instead of learning what strain is across age groups. This visualization and exploration helps point out possible failures of modeling we could expect.</p>
 <p>Another takeaway from this exploration is how SLPs label audio data ccording to the CAPE-V protocol. If we wished to incorporate different types of data, or perhaps even learn how to provide CAPE-V ratings ourselves, it’s incredibly important to know the difference between voices with high and low values of a particular perceptual quality. Given that this dataset is primarily concerned with patients with voice disorders, knowing the values that healthy or “typical” voices might have lets us know what PQ values healthy voices in other datasets should have. Generalization is a huge issue for machine learning and deep learning models. Having knowledge about how experts use the CAPE-V protocol across voices facilitates the future collection of more data to mitigate the generalization issue.</p>
+<p>In the next post, we’re going to try to and actually model some of these perceptual qualities. Let’s see if we can do as the experts do!</p>
 
 
 </section>
