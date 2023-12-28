@@ -9,8 +9,6 @@ format:
     toc: true
 ---
 
-# WEE-WOO: This is a work in progress
-
 ![Another day, another tutorial](thumbnail.webp){width=800 height=300 fig-align="center"}
 
 Welcome to a blog post about exploring the <span class="no-underline">[Perceptual Voice Qualities Database (PVQD)](https://voicefoundation.org/health-science/videos-education/pvqd/)</span>. This is based off of a ML + Speech workshop I held in the Berkeley Speech Group in Fall '23. <span class="no-underline">[That workshop and the workbooks are available online](https://github.com/Berkeley-Speech-Group/audio_ml_workshop_2023)</span> if you want to work with the code yourself! If you're interested in Deep Learning, there's also some cool stuff in there about working with HuBERT representations of speech data too! The workshop doesn't assume any knowledge of Pandas, Machine Learning, or Deep Learning, with the focus is more on getting your hands dirty with the tools vs. understanding 100% of what you're doing. 
@@ -29,12 +27,52 @@ There's perspectives waiting to be studied, methods to be discovered, and miscon
 
 ## What are Perceptual Voice Qualities and the PVQD?
 
+Thought of as the acoustic "coloring" of an individual's voice, perceptual qualities are one way that clinicians and voice experts conceptualize the subjective perception of a voice. Here, we provide examples of the CAPE-V perceptual qualities we use in our work. For a description of the gendered perceptual qualities of resonance and weight, we recommend taking a look over voice examples from the [Voice Resource Repository](https://wiki.sumianvoice.com/wiki/pages/voice-examples/) by SumianVoice.
+
+Talking about perceptual qualities in the abstract is good and all, but if you want to actually understand anything related to voice, you're going to need to listen to them. While the [CAPE-V protocol](https://phenx-portal.s3.amazonaws.com/public/phenx-content/ERP/ERP7/Nov.27.2018_Meeting/04_Consensus+auditory+perceptual+evaluation+of+voice_2009.pdf) is a helpful rubric for working perceptual qualities related to vocal health, most of the voice data and assessments are privately held by voice clinics to protect the privacy of patients. Fortunately, there are a few publicly available datasets like the [Perceptual Voice Qualities Database (PVQD)](https://voicefoundation.org/perceptual-voice-qualities-database/) that contain voice samples and expert-provided ratings. In this tutorial, we'll explore the PVQD and the CAPE-V perceptual qualities!
 
 ### Perceptual Qualities Examples
 
-Here's a list of examples of the perceptual qualities.
+Here's a list of examples of the perceptual qualities from the PVQD and their definitions per the CAPE-V Protocol.
+
+**Strain**: Perception of vocal effort (hyperfunction). 
+
+```{python}
+import IPython
+IPython.display.Audio("../../data/pvqd/examples/pt0015_strain.wav")
+```
+
+**Loudness**: Deviation in perceived loudness typical for that speaker's age and gender.
+
+```{python}
+import IPython
+IPython.display.Audio("../../data/pvqd/examples/pt008_loud.wav")
+```
+
+**Roughness**: 	Perceived irregularity in the voicing source.
+
+```{python}
+import IPython
+IPython.display.Audio("../../data/pvqd/examples/pt0014_rough.wav")
+```
+
+**Breathiness**: Audible air escape in the voice.
+
+```{python}
+import IPython
+IPython.display.Audio("../../data/pvqd/examples/pt118_breath.wav")
+```
+
+**Pitch**: Deviation in pitch values typical for that speaker's age and gender. 
+
+```{python}
+import IPython
+IPython.display.Audio("../../data/pvqd/examples/pt019_pitch.wav")
+```
 
 ## What are Pandas and Seaborn?
+
+If you're interested in doing anything with data, you're going to need a way to look at it and mess wtih it. In the world of Python, one way to do that is with Pandas and Seaborn. Pandas for manipulating the data and getting it in the format you want, and Seaborn for quickly visualizing it. These are great tools for Exploratory Data Analysis (EDA), which, to butcher it with my own paraphrased phrasing, is the process of getting to know your data and understanding what possible patterns might be there. EDA is its own exciting research field, and doing it robustly requires a lot of thought about the sort of questions you're asking. For the purposes of this tutorial, knowing that Pandas and Seaborn are two tools for performing exploratory data analysis is good enough background to get started looking at the PVQD. 
 
 ## Preprocessing the PVQD
 
